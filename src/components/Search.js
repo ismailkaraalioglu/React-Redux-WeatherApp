@@ -27,12 +27,12 @@ function Search() {
             lon: position.coords.longitude,
           })
         );
+        dispatch(changeLocation(true));
       },
       (error) => {
         alert(error.message);
       }
     );
-    dispatch(changeLocation(true));
   };
 
   const handleSubmit = (e) => {
