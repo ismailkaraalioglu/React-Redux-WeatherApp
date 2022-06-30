@@ -75,7 +75,7 @@ function Search() {
         </div>
       </div>
       {weatherGetCityStatus === "failed" && (
-        <div className=" text-red-600">Please type correct!</div>
+        <div className="text-red-600">Please type correct!</div>
       )}
     </>
   );

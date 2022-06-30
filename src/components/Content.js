@@ -29,23 +29,13 @@ function Content() {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (window.matchMedia("prefers-color-scheme: dark").matches) {
-  //     // dispatch(changeTheme("dark"));
-  //     window.localStorage.setItem("theme", "dark")
-  //   } else {
-  //     // dispatch(changeTheme("light"));
-  //     window.localStorage.setItem("theme", "light")
-  //   }
-  // }, []);
-
   useEffect(() => {
     if (weatherTheme === "dark") {
       document.documentElement.classList.add("dark");
-      window.localStorage.setItem("theme", "dark")
+      window.localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      window.localStorage.setItem("theme", "light")
+      window.localStorage.setItem("theme", "light");
     }
   }, [weatherTheme]);
 
@@ -56,7 +46,7 @@ function Content() {
   return (
     <>
       {weatherDataStatus === "succeeded" && (
-        <div className="w-full h-screen bg-gray-100 p-8 dark:bg-neutral-800 dark:bg-opacity-95">
+        <div className="2xl:w-full 2xl:h-screen w-full h-full bg-gray-100 p-8 dark:bg-neutral-800 dark:bg-opacity-95">
           <div className="flex justify-between">
             <h1 className="text-2xl dark:text-white">Week</h1>
             <div>
@@ -74,7 +64,7 @@ function Content() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-8">
+          <div className="2xl:flex 2xl:items-center grid grid-cols-1 gap-y-4 justify-between mt-8">
             {weatherDailyData.slice(1).map((daily, index) => (
               <DailyCard key={index} daily={daily} />
             ))}
@@ -82,8 +72,8 @@ function Content() {
 
           <div className=" mt-10 dark:text-white">
             <h1 className="text-xl">Today's Highlights</h1>
-            <div className="grid grid-cols-2 gap-x-5">
-              <div className="flex flex-col pb-5 pt-4 pl-7 grow bg-white mt-5 rounded-3xl shadow-lg dark:bg-neutral-800">
+            <div className="2xl:grid 2xl:grid-cols-2 2xl:gap-x-5 grid grid-cols-1">
+              <div className="flex flex-col 2xl:pb-5 pb-9 pt-4 pl-7 grow bg-white mt-5 rounded-3xl shadow-lg dark:bg-neutral-800">
                 <span className="text-gray-400">Humidity</span>
                 <div className="flex mt-6">
                   <span className="inline-block mr-3 bg-green-500 border-2 border-green-800 rounded-full p-1">

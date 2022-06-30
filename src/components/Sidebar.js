@@ -31,7 +31,7 @@ function Sidebar() {
   return (
     <>
       {weatherDataStatus === "succeeded" && (
-        <div className="max-w-xs w-full h-screen p-8 flex flex-col dark:bg-neutral-800">
+        <div className="2xl:max-w-xs 2xl:w-full 2xl:h-screen w-full items-center p-8 flex flex-col dark:bg-neutral-800">
           <Search />
 
           <div className="my-8">
@@ -78,7 +78,7 @@ function Sidebar() {
             <img
               src={require(`../bgrndimg/photo${Math.floor(
                 Math.random() * 10
-              )}.jfif`)}
+              )}.jpg`)}
               alt="bgrndimg"
               className="w-full h-full rounded-3xl bg-center bg-contain overflow-hidden opacity-50"
             />
