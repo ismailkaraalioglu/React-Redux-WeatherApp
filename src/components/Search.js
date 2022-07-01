@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// TOASTER
+import toast, { Toaster } from "react-hot-toast";
+
 // REACT ICONS
 import { BiSearch } from "react-icons/bi";
 import { IoMdLocate } from "react-icons/io";
@@ -30,7 +33,7 @@ function Search() {
         dispatch(changeLocation(true));
       },
       (error) => {
-        alert(error.message);
+        toast.error(error.message);
       }
     );
   };
@@ -77,6 +80,7 @@ function Search() {
       {weatherGetCityStatus === "failed" && (
         <div className="text-red-600">Please type correct!</div>
       )}
+      <Toaster />
     </>
   );
 }
