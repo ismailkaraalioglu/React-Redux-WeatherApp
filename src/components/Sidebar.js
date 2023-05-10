@@ -31,7 +31,7 @@ function Sidebar() {
   return (
     <>
       {weatherDataStatus === "succeeded" && (
-        <div className="2xl:max-w-xs 2xl:w-full 2xl:h-screen w-full items-center p-8 flex flex-col dark:bg-neutral-800">
+        <div className="md:max-w-xs md:w-full md:h-screen w-full items-center p-8 flex flex-col dark:bg-neutral-800">
           <Search />
 
           <div className="my-8">

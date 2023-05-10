@@ -35,7 +35,7 @@ function WeatherApp() {
   }
 
   return (
-    <div className="2xl:flex">
+    <div className="md:flex">
       <Sidebar />
       <Content />
     </div>
